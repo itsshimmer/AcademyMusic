@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		483D95B3267D0C2F00E2123E /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483D95B2267D0C2F00E2123E /* Library.storyboard */; };
+		483D95B5267D0C4800E2123E /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483D95B4267D0C4800E2123E /* Favorites.storyboard */; };
+		483D95B7267D0C6C00E2123E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483D95B6267D0C6C00E2123E /* Discover.storyboard */; };
+		483D95B9267D17C100E2123E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483D95B8267D17C100E2123E /* LibraryViewController.swift */; };
 		B49EE785267D072D00740064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EE784267D072D00740064 /* AppDelegate.swift */; };
 		B49EE787267D072D00740064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EE786267D072D00740064 /* SceneDelegate.swift */; };
 		B49EE789267D072D00740064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EE788267D072D00740064 /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		483D95B2267D0C2F00E2123E /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
+		483D95B4267D0C4800E2123E /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		483D95B6267D0C6C00E2123E /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		483D95B8267D17C100E2123E /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		B49EE781267D072D00740064 /* AcademyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49EE784267D072D00740064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B49EE786267D072D00740064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 				B49EE78D267D072E00740064 /* Assets.xcassets */,
 				B49EE78F267D072E00740064 /* LaunchScreen.storyboard */,
 				B49EE792267D072E00740064 /* Info.plist */,
+				483D95B2267D0C2F00E2123E /* Library.storyboard */,
+				483D95B4267D0C4800E2123E /* Favorites.storyboard */,
+				483D95B6267D0C6C00E2123E /* Discover.storyboard */,
+				483D95B8267D17C100E2123E /* LibraryViewController.swift */,
 			);
 			path = AcademyMusic;
 			sourceTree = "<group>";
@@ -126,7 +138,10 @@
 			files = (
 				B49EE791267D072E00740064 /* LaunchScreen.storyboard in Resources */,
 				B49EE78E267D072E00740064 /* Assets.xcassets in Resources */,
+				483D95B3267D0C2F00E2123E /* Library.storyboard in Resources */,
 				B49EE78C267D072D00740064 /* Main.storyboard in Resources */,
+				483D95B5267D0C4800E2123E /* Favorites.storyboard in Resources */,
+				483D95B7267D0C6C00E2123E /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +154,7 @@
 			files = (
 				B49EE789267D072D00740064 /* ViewController.swift in Sources */,
 				B49EE785267D072D00740064 /* AppDelegate.swift in Sources */,
+				483D95B9267D17C100E2123E /* LibraryViewController.swift in Sources */,
 				B49EE787267D072D00740064 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
