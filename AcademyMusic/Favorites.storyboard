@@ -76,8 +76,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="artistLabel" destination="a68-ug-5G7" id="mBP-Tv-6us"/>
-                                    <outlet property="image" destination="Zrh-O8-9FM" id="Ljz-OF-C5A"/>
-                                    <outlet property="musicImage" destination="Zrh-O8-9FM" id="pHV-Ap-utU"/>
+                                    <outlet property="musicImage" destination="Zrh-O8-9FM" id="GGB-Sz-o5B"/>
                                     <outlet property="musicNameLabel" destination="H3h-7c-Cg3" id="ZE0-b6-tMP"/>
                                 </connections>
                             </tableViewCell>
