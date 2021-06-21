@@ -10,10 +10,20 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var service: MusicService?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        do {
+            self.service = try MusicService()
+            let collection = service?.loadLibrary() ?? []
+            service?.toggleFavorite(music: collection[0].musics[0], isFavorite: false)
+            service?.toggleFavorite(music: collection[1].musics[3], isFavorite: false)
+        } catch {
+            print(error)
+        }
+        
         return true
     }
 
