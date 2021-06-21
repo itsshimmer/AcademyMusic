@@ -17,6 +17,10 @@
 		B49EE78C267D072D00740064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49EE78A267D072D00740064 /* Main.storyboard */; };
 		B49EE78E267D072E00740064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49EE78D267D072E00740064 /* Assets.xcassets */; };
 		B49EE791267D072E00740064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49EE78F267D072E00740064 /* LaunchScreen.storyboard */; };
+		EC01771A267D23F800E66B80 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC017719267D23F800E66B80 /* FavoritesViewController.swift */; };
+		EC01771E2680F94600E66B80 /* ServiceMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC01771D2680F94600E66B80 /* ServiceMusic.swift */; };
+		EC1FADB82681012C00D0708A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = EC1FADB72681012C00D0708A /* data.json */; };
+		EC1FADBA26810DC800D0708A /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1FADB926810DC800D0708A /* FavoritesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		B49EE78D267D072E00740064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B49EE790267D072E00740064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B49EE792267D072E00740064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC017719267D23F800E66B80 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		EC01771D2680F94600E66B80 /* ServiceMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMusic.swift; sourceTree = "<group>"; };
+		EC1FADB72681012C00D0708A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		EC1FADB926810DC800D0708A /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 			children = (
 				B49EE784267D072D00740064 /* AppDelegate.swift */,
 				B49EE786267D072D00740064 /* SceneDelegate.swift */,
+				EC1FADB72681012C00D0708A /* data.json */,
 				B49EE788267D072D00740064 /* ViewController.swift */,
 				B49EE78A267D072D00740064 /* Main.storyboard */,
 				B49EE78D267D072E00740064 /* Assets.xcassets */,
@@ -73,8 +82,11 @@
 				B49EE792267D072E00740064 /* Info.plist */,
 				483D95B2267D0C2F00E2123E /* Library.storyboard */,
 				483D95B4267D0C4800E2123E /* Favorites.storyboard */,
+				EC017719267D23F800E66B80 /* FavoritesViewController.swift */,
+				EC1FADB926810DC800D0708A /* FavoritesTableViewCell.swift */,
 				483D95B6267D0C6C00E2123E /* Discover.storyboard */,
 				483D95B8267D17C100E2123E /* LibraryViewController.swift */,
+				EC01771D2680F94600E66B80 /* ServiceMusic.swift */,
 			);
 			path = AcademyMusic;
 			sourceTree = "<group>";
@@ -137,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B49EE791267D072E00740064 /* LaunchScreen.storyboard in Resources */,
+				EC1FADB82681012C00D0708A /* data.json in Resources */,
 				B49EE78E267D072E00740064 /* Assets.xcassets in Resources */,
 				483D95B3267D0C2F00E2123E /* Library.storyboard in Resources */,
 				B49EE78C267D072D00740064 /* Main.storyboard in Resources */,
@@ -155,7 +168,10 @@
 				B49EE789267D072D00740064 /* ViewController.swift in Sources */,
 				B49EE785267D072D00740064 /* AppDelegate.swift in Sources */,
 				483D95B9267D17C100E2123E /* LibraryViewController.swift in Sources */,
+				EC01771A267D23F800E66B80 /* FavoritesViewController.swift in Sources */,
 				B49EE787267D072D00740064 /* SceneDelegate.swift in Sources */,
+				EC01771E2680F94600E66B80 /* ServiceMusic.swift in Sources */,
+				EC1FADBA26810DC800D0708A /* FavoritesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
