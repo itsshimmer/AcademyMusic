@@ -11,25 +11,30 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     
     private var musicService: MusicService = try! MusicService()
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return musicService.favoriteMusics.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoritesTableViewCell else { return UITableViewCell()}
-        let music = musicService.favoriteMusics[indexPath.row]
-        cell.textLabel?.text = music.title
-        cell.detailTextLabel?.text = music.artist
-        cell.musicImage.image = musicService.getCoverImage(forItemIded: musicService.favoriteMusics[indexPath.row].id)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoritesTableViewCell
+        else {
+            return UITableViewCell()
+        }
+        //configurar a célula
+        let songs: [Music] = musicService.favoriteMusics
+
+        cell.musicImage.image = musicService.getCoverImage(forItemIded: songs[indexPath.row].id)
+        cell.musicNameLabel.text = songs[indexPath.row].title
+        cell.artistLabel.text = songs[indexPath.row].artist
+        
         return cell
+   
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
