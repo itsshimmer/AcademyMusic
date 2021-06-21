@@ -7,12 +7,25 @@
 
 import UIKit
 
-class LibraryViewController: UIViewController {
+class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
+    @IBOutlet weak var libraryTableView: UITableView!
+    var musicService: MusicService?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.largeContentTitle = "library"
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = UIColor(named: "NavBarGray")
+        navigationItem.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+        libraryTableView.delegate = self
+        libraryTableView.dataSource = self
+        do {
+            musicService = try MusicService()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
 
@@ -25,5 +38,30 @@ class LibraryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
+    func tableView( _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let collections = musicService?.loadLibrary()
+        
+        return collections?.count ?? 0
+
+    }
+
+    func tableView( _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "libraryListCell", for: indexPath) as? LibraryTableViewCell
+        else {
+            return UITableViewCell()
+        }
+        //configurar a célula
+        let collection: [MusicCollection] = musicService?.loadLibrary() ?? []
+
+
+        cell.collectionImage.image = musicService?.getCoverImage(forItemIded: collection[indexPath.row].id)
+        cell.title.text = collection[indexPath.row].title
+        cell.collection.text = collection[indexPath.row].mainPerson
+        
+        return cell
+    }
 }
