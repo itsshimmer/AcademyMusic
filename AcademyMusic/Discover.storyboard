@@ -30,7 +30,7 @@
                             <constraint firstItem="4RC-nb-lNn" firstAttribute="centerX" secondItem="gOg-y3-Y5O" secondAttribute="centerX" id="6F6-EI-i5j"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="7mc-zo-PXB"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="magnifyingglass" catalog="system" id="7mc-zo-PXB"/>
                     <navigationItem key="navigationItem" title="Discover" id="QIw-Nb-n7v"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -59,6 +59,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="libraryListCell" rowHeight="61" id="mVE-Nz-WJT" customClass="LibraryTableViewCell" customModule="AcademyMusic" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="libraryListCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="libraryListCell" rowHeight="61" id="mVE-Nz-WJT" customClass="LibraryTableViewCell" customModule="AcademyMusic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mVE-Nz-WJT" id="bN1-nG-HOU">
@@ -47,18 +47,19 @@
                                                     <rect key="frame" x="16" y="6" width="49" height="49"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="5cK-Xz-60h" secondAttribute="height" multiplier="1:1" id="7uK-Jg-0v4"/>
+                                                        <constraint firstAttribute="height" priority="999" constant="64" id="gLq-Ol-xRQ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Euk-gR-9lO">
                                                     <rect key="frame" x="75" y="14.5" width="291.5" height="32.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDe-r7-12L">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDe-r7-12L">
                                                             <rect key="frame" x="0.0" y="0.0" width="291.5" height="18"/>
                                                             <accessibility key="accessibilityConfiguration" identifier="TitleLabel"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGs-Jf-JxH">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGs-Jf-JxH">
                                                             <rect key="frame" x="0.0" y="18" width="291.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,9 +83,12 @@
                                                 <constraint firstItem="5cK-Xz-60h" firstAttribute="top" secondItem="bN1-nG-HOU" secondAttribute="top" constant="6" id="y8P-DU-ANY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="libraryListCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="collection" destination="kGs-Jf-JxH" id="Kyg-np-XOw"/>
-                                            <outlet property="image" destination="5cK-Xz-60h" id="Tb7-Qk-DPD"/>
+                                            <outlet property="collectionImage" destination="5cK-Xz-60h" id="3mE-bM-kti"/>
                                             <outlet property="title" destination="WDe-r7-12L" id="yDO-6F-JEo"/>
                                         </connections>
                                     </tableViewCell>
@@ -100,7 +104,7 @@
                             <constraint firstItem="0pH-n1-Fd5" firstAttribute="top" secondItem="fV4-AA-euP" secondAttribute="top" id="s7W-2q-Dm3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="y1h-y0-Gpl"/>
+                    <tabBarItem key="tabBarItem" title="Library" image="book.closed.fill" catalog="system" id="y1h-y0-Gpl"/>
                     <navigationItem key="navigationItem" title="Library" id="wxV-aR-beP"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -114,6 +118,7 @@
     </scenes>
     <color key="tintColor" name="NavBarGray"/>
     <resources>
+        <image name="book.closed.fill" catalog="system" width="115" height="128"/>
         <namedColor name="NavBarGray">
             <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

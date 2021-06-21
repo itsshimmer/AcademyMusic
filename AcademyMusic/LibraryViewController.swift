@@ -7,11 +7,11 @@
 
 import UIKit
 
-class LibraryViewController: UIViewController {
+class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet weak var libraryTableView: UITableView!
-    var musicService: MusicService = try! MusicService()
+    var musicService: MusicService?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,13 @@ class LibraryViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = UIColor(named: "NavBarGray")
         navigationItem.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+        libraryTableView.delegate = self
+        libraryTableView.dataSource = self
+        do {
+            musicService = try MusicService()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
 
@@ -35,24 +42,26 @@ class LibraryViewController: UIViewController {
         return 1
     }
 
-    func tableView( tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let collections = musicService.loadLibrary()
-
-        return collections.count
+    func tableView( _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let collections = musicService?.loadLibrary()
+        
+        return collections?.count ?? 0
 
     }
 
-    func tableView( tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "libraryListCell", for: indexPath) as? LibraryTableViewCell
-
+    func tableView( _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "libraryListCell", for: indexPath) as? LibraryTableViewCell
+        else {
+            return UITableViewCell()
+        }
         //configurar a célula
-        let collection: MusicCollection = musicService.loadLibrary()[indexPath.row]
+        let collection: [MusicCollection] = musicService?.loadLibrary() ?? []
 
 
-        cell?.collectionImage.image = UIImage(named: collection.id)
-        cell?.title.text = collection.title
-        cell?.collection.text = collection.mainPerson
-
-        return cell!
+        cell.collectionImage.image = musicService?.getCoverImage(forItemIded: collection[indexPath.row].id)
+        cell.title.text = collection[indexPath.row].title
+        cell.collection.text = collection[indexPath.row].mainPerson
+        
+        return cell
     }
 }
