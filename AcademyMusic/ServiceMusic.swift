@@ -107,9 +107,6 @@ final class MusicService {
     func getCollection(id: String) -> MusicCollection? {
         collections.first { $0.id == id }
     }
-//    func getFavoriteMusics() -> [Music] {
-//        return favoriteMusics
-//    }
     
     func removeMusic(_ music: Music, from collection: MusicCollection) {
         guard collection.supportsEdition else { return }
