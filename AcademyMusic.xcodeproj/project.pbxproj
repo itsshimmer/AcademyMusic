@@ -74,7 +74,6 @@
 		B49EE783267D072D00740064 /* AcademyMusic */ = {
 			isa = PBXGroup;
 			children = (
-				B48039FF26812EDC0063CD0E /* FavoritesTableViewCell.swift */,
 				B48039FD26812B100063CD0E /* LibraryTableViewCell.swift */,
 				B48039FB26812AFD0063CD0E /* LibraryViewController.swift */,
 				B49EE784267D072D00740064 /* AppDelegate.swift */,
@@ -87,6 +86,7 @@
 				B49EE792267D072E00740064 /* Info.plist */,
 				483D95B2267D0C2F00E2123E /* Library.storyboard */,
 				483D95B4267D0C4800E2123E /* Favorites.storyboard */,
+				B48039FF26812EDC0063CD0E /* FavoritesTableViewCell.swift */,
 				EC017719267D23F800E66B80 /* FavoritesViewController.swift */,
 				483D95B6267D0C6C00E2123E /* Discover.storyboard */,
 				B41BAB2A26811630005C88C7 /* ServiceMusic.swift */,

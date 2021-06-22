@@ -16,7 +16,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoritesTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoritesListCell", for: indexPath) as? FavoritesTableViewCell
         else {
             return UITableViewCell()
         }
@@ -38,7 +38,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationController?.navigationBar.backgroundColor = UIColor(named: "NavBarGray" )
+        navigationController?.navigationBar.backgroundColor = UIColor(named: "NavBarGray" )
         tableView.dataSource = self
         tableView.delegate = self
         do {
