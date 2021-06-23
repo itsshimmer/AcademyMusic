@@ -9,8 +9,9 @@ import UIKit
 
 class AboutViewController: UIViewController {
     
-    var album: MusicCollection?
+    
     private var musicService: MusicService = try! MusicService()
+    var album: MusicCollection?
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var albumImage: UIImageView!
@@ -25,9 +26,18 @@ class AboutViewController: UIViewController {
     var albumLength: TimeInterval = 0
     
     let dateFormatter = DateFormatter()
+    let timeIntervalFormatter = DateComponentsFormatter()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.isScrollEnabled = true
+        dateFormatter.locale = Locale(identifier: "en_US")
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        timeIntervalFormatter.unitsStyle = .abbreviated
+        timeIntervalFormatter.allowedUnits = [.hour, .minute]
+        album = musicService.getCollection(id: "2KJjOBX280F3hZZE1xO33O")
         guard let album = album else { return }
         albumImage.image = musicService.getCoverImage(forItemIded: album.id)
         albumName.text = album.title
@@ -35,8 +45,8 @@ class AboutViewController: UIViewController {
             albumLength += music.length
         }
         artistName.text = "Album by \(album.mainPerson)"
-        albumDuration.text = "\(album.musics.count) songs, \(albumLength)"
-        albumReleaseDate.text = dateFormatter.string(from: album.referenceDate)
+        albumDuration.text = "\(album.musics.count) songs, \(timeIntervalFormatter.string(from: albumLength)!)"
+        albumReleaseDate.text = "Released in \(dateFormatter.string(from: album.referenceDate))"
         about.text = album.albumDescription
         aboutArtistTitle.text = "About \(album.mainPerson)"
         aboutArtist.text = album.albumArtistDescription
