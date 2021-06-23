@@ -38,7 +38,16 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = UIColor(named: "NavBarGray" )
+        navigationController?.navigationBar.backgroundColor = UIColor(named: "NavBarGray")
+        navigationItem.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+//        navigationItem.titleView = searchBarView
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.placeholder = "Search"
+//        searchController.isActive = true
+//        self.definesPresentationContext = true
+//        searchController.definesPresentationContext = false
+        
+        self.navigationItem.searchController = searchController
         tableView.dataSource = self
         tableView.delegate = self
         do {
@@ -46,6 +55,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         } catch {
             print(error)
         }
+        
     }
     @IBOutlet weak var tableView: UITableView!
     
