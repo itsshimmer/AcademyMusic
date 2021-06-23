@@ -133,6 +133,7 @@
                                         </accessibility>
                                         <connections>
                                             <outlet property="artist" destination="nhd-lR-nF7" id="8pf-zr-aMP"/>
+                                            <outlet property="favoriteButton" destination="JNr-ub-6Wh" id="HXR-C2-RgD"/>
                                             <outlet property="musicImage" destination="SdV-nI-V80" id="QpS-2q-JRw"/>
                                             <outlet property="musicTitle" destination="W2d-ey-WTG" id="3Rx-F9-SGM"/>
                                         </connections>

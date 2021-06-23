@@ -11,6 +11,7 @@ class DetailViewCell: UITableViewCell {
     @IBOutlet weak var musicImage: UIImageView!
     @IBOutlet weak var musicTitle: UILabel!
     @IBOutlet weak var artist: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     
     override func awakeFromNib() {

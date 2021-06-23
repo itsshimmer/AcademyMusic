@@ -38,7 +38,11 @@ class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableV
         collectionTitle.text = musicCollection?.title
         artist.text = "Album by \(musicCollection?.mainPerson ?? "")"
         songCount.text = "\(musicCollection?.musics.count ?? 0) songs"
-        releaseDate.text = "Released \(musicCollection!.referenceDate)"
+        let form = DateFormatter()
+        form.locale = Locale(identifier: "en_US")
+        form.dateStyle = .medium
+        form.timeStyle = .none
+        releaseDate.text = "Released \(form.string(from: musicCollection!.referenceDate))"
         
     }
     
