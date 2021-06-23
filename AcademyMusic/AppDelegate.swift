@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             self.service = try MusicService()
             let collection = service?.loadLibrary() ?? []
-            service?.toggleFavorite(music: collection[0].musics[0], isFavorite: false)
-            service?.toggleFavorite(music: collection[1].musics[3], isFavorite: false)
+            service?.toggleFavorite(music: collection[0].musics[0], isFavorite: true)
+            service?.toggleFavorite(music: collection[1].musics[3], isFavorite: true)
         } catch {
             print(error)
         }

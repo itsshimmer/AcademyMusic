@@ -14,7 +14,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func heartButtonAction(_ sender: Any) {
-        
+        print("favorite button action")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
