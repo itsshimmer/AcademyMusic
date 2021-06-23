@@ -28,7 +28,9 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
     /*
     // MARK: - Navigation
 
@@ -64,4 +66,18 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let collection: [MusicCollection] = musicService?.loadLibrary() ?? []
+    
+        performSegue(withIdentifier: "toDetails", sender: collection[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetails", let musicCollection = sender as? MusicCollection {
+            let destination = segue.destination as? AlbumDetailViewController
+            destination?.musicCollection = musicCollection
+        }
+    }
+    
 }
