@@ -11,7 +11,7 @@
         <!--Playing-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="PlayingViewController" customModule="AcademyMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,6 +104,17 @@
                     <navigationItem key="navigationItem" title="Playing" id="lWX-0d-9Jb">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="list.dash" catalog="system" id="3Z9-mF-bDa"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artist" destination="elO-Iv-Map" id="icQ-0i-LPA"/>
+                        <outlet property="backButton" destination="D3n-wa-7S0" id="j1O-gk-Umb"/>
+                        <outlet property="nextButton" destination="poY-fx-T0F" id="cZs-u3-3Pn"/>
+                        <outlet property="playButton" destination="XIy-qH-ID7" id="Ct9-tB-IlG"/>
+                        <outlet property="remainingTime" destination="xFd-mj-Bdy" id="5LA-oq-wPo"/>
+                        <outlet property="slider" destination="BWd-bd-7FH" id="mtn-45-yby"/>
+                        <outlet property="songImage" destination="xmS-IC-szU" id="z4w-xQ-UEh"/>
+                        <outlet property="songTitle" destination="Y4Y-Us-Zag" id="r96-HX-dOr"/>
+                        <outlet property="timePassed" destination="Akj-7r-tSO" id="Phy-NE-vtc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
