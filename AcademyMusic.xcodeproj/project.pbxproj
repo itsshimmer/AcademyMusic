@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48349FF326825ABF005C76C9 /* AlbumDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48349FF226825ABF005C76C9 /* AlbumDetail.storyboard */; };
+		48349FF526825E54005C76C9 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48349FF426825E54005C76C9 /* AlbumDetailViewController.swift */; };
+		48349FF72683BF76005C76C9 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48349FF62683BF76005C76C9 /* DetailViewCell.swift */; };
 		483D95B3267D0C2F00E2123E /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483D95B2267D0C2F00E2123E /* Library.storyboard */; };
 		483D95B5267D0C4800E2123E /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483D95B4267D0C4800E2123E /* Favorites.storyboard */; };
 		483D95B7267D0C6C00E2123E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483D95B6267D0C6C00E2123E /* Discover.storyboard */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48349FF226825ABF005C76C9 /* AlbumDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumDetail.storyboard; sourceTree = "<group>"; };
+		48349FF426825E54005C76C9 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
+		48349FF62683BF76005C76C9 /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		483D95B2267D0C2F00E2123E /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		483D95B4267D0C4800E2123E /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		483D95B6267D0C6C00E2123E /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 				EC04EBEE2682610800818913 /* AboutViewController.swift */,
 				483D95B6267D0C6C00E2123E /* Discover.storyboard */,
 				B41BAB2A26811630005C88C7 /* ServiceMusic.swift */,
+				48349FF226825ABF005C76C9 /* AlbumDetail.storyboard */,
+				48349FF426825E54005C76C9 /* AlbumDetailViewController.swift */,
+				48349FF62683BF76005C76C9 /* DetailViewCell.swift */,
 			);
 			path = AcademyMusic;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B49EE791267D072E00740064 /* LaunchScreen.storyboard in Resources */,
+				48349FF326825ABF005C76C9 /* AlbumDetail.storyboard in Resources */,
 				EC1FADB82681012C00D0708A /* data.json in Resources */,
 				EC04EBED26825BC600818913 /* About.storyboard in Resources */,
 				EC04EBF12683AA9E00818913 /* Playing.storyboard in Resources */,
@@ -197,7 +207,9 @@
 				EC04EBF52683BE8D00818913 /* AboutTableViewCell.swift in Sources */,
 				B49EE787267D072D00740064 /* SceneDelegate.swift in Sources */,
 				B48039FC26812AFD0063CD0E /* LibraryViewController.swift in Sources */,
+				48349FF526825E54005C76C9 /* AlbumDetailViewController.swift in Sources */,
 				B4803A0026812EDC0063CD0E /* FavoritesTableViewCell.swift in Sources */,
+				48349FF72683BF76005C76C9 /* DetailViewCell.swift in Sources */,
 				B48039FE26812B100063CD0E /* LibraryTableViewCell.swift in Sources */,
 				B41BAB2B26811630005C88C7 /* ServiceMusic.swift in Sources */,
 			);
