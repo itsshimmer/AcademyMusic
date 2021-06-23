@@ -8,6 +8,10 @@
 import UIKit
 
 class FavoritesTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var musicNameLabel: UILabel!
+    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var musicImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,8 +23,4 @@ class FavoritesTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-    @IBOutlet weak var musicNameLabel: UILabel!
-    @IBOutlet weak var artistLabel: UILabel!
-    @IBOutlet weak var musicImage: UIImageView!
 }
