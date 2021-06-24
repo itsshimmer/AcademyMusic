@@ -14,12 +14,14 @@ class FavoritesTableViewCell: UITableViewCell {
     @IBOutlet weak var musicImage: UIImageView!
     var music: Music?
     var tableView: UITableView?
+    var viewController: UIViewController?
     
     
     @IBAction func favoriteButtonAction(_ sender: UIButton) {
         let musicService: MusicService = try! MusicService()
         musicService.toggleFavorite(music: music!, isFavorite: false)
         self.tableView?.reloadData()
+        viewController?.viewDidLoad()
     }
     
     override func awakeFromNib() {

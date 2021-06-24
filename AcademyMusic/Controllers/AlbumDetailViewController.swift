@@ -28,6 +28,10 @@ class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableV
         detailTableView.delegate = self
         detailTableView.dataSource = self
         navigationController?.navigationBar.prefersLargeTitles = false
+        let button = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.myRightSideBarButtonItemTapped(_:)))
+        button.setBackgroundImage(UIImage(systemName: "info.circle"), for: UIControl.State.normal, barMetrics: UIBarMetrics.default)
+        button.accessibilityRespondsToUserInteraction = true
+        self.navigationItem.rightBarButtonItem = button
         do {
             musicService = try MusicService()
         } catch {
@@ -43,7 +47,21 @@ class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableV
         form.dateStyle = .medium
         form.timeStyle = .none
         releaseDate.text = "Released \(form.string(from: musicCollection!.referenceDate))"
+
         
+    }
+    
+    @objc func myRightSideBarButtonItemTapped(_ sender:UIBarButtonItem!)
+    {
+        performSegue(withIdentifier: "about", sender: musicCollection)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "about", let musicCollection = sender as? MusicCollection {
+            let navBar = segue.destination as? UINavigationController
+            let destination = navBar?.topViewController as? AboutViewController
+            destination?.collection = musicCollection
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
