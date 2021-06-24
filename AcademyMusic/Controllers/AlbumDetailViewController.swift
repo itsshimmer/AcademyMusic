@@ -46,6 +46,10 @@ class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        detailTableView.reloadData()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -62,6 +66,13 @@ class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableV
         //configurar a célula
 
         let music = musicCollection?.musics[indexPath.row]
+        cell.music = music
+        let contain: Bool = musicService!.favoriteMusics.contains(music!)
+        if contain {
+            cell.favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: UIControl.State.normal)
+        }else {
+            cell.favoriteButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+        }
         cell.musicImage.image = UIImage(named: music!.id)
         cell.musicTitle.text = music?.title ?? ""
         cell.artist.text = music?.artist ?? ""

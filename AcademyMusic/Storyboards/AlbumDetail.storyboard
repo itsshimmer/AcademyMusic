@@ -113,7 +113,10 @@
                                                         <constraint firstAttribute="width" secondItem="JNr-ub-6Wh" secondAttribute="height" multiplier="1:1" id="lRw-gs-fPp"/>
                                                     </constraints>
                                                     <color key="tintColor" systemColor="systemRedColor"/>
-                                                    <state key="normal" image="heart.fill" catalog="system"/>
+                                                    <state key="normal" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="favoriteButtonAction:" destination="Uge-MJ-zYs" eventType="touchUpInside" id="zWp-w8-S3q"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -168,7 +171,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

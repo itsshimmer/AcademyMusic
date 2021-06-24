@@ -13,47 +13,18 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func heartButtonAction(_ sender: Any) {
-        print("favorite button action")
-    }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return musicService.favoriteMusics.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoritesListCell", for: indexPath) as? FavoritesTableViewCell
-        else {
-            return UITableViewCell()
-        }
-        //configurar a célula
-        let songs: [Music] = musicService.favoriteMusics
-
-        cell.musicImage.image = musicService.getCoverImage(forItemIded: songs[indexPath.row].id)
-        cell.musicNameLabel.text = songs[indexPath.row].title
-        cell.artistLabel.text = songs[indexPath.row].artist
-        
-        return cell
-   
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-//        navigationItem.titleView = searchBarView
+        //        navigationItem.titleView = searchBarView
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Search"
-//        searchController.isActive = true
-//        self.definesPresentationContext = true
-//        searchController.definesPresentationContext = false
+        //        searchController.isActive = true
+        //        self.definesPresentationContext = true
+        //        searchController.definesPresentationContext = false
         self.navigationItem.searchController = searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -70,5 +41,39 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return musicService.favoriteMusics.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoritesListCell", for: indexPath) as? FavoritesTableViewCell
+        else {
+            return UITableViewCell()
+        }
+        //configurar a célula
+        let songs: [Music] = musicService.favoriteMusics
+        
+        cell.musicImage.image = musicService.getCoverImage(forItemIded: songs[indexPath.row].id)
+        cell.musicNameLabel.text = songs[indexPath.row].title
+        cell.artistLabel.text = songs[indexPath.row].artist
+        cell.music = songs[indexPath.row]
+        cell.tableView = self.tableView
+        
+        return cell
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    
+}
