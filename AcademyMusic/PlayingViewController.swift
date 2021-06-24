@@ -30,6 +30,7 @@ class PlayingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         formatter.allowedUnits = [.minute, .second]
+        formatter.zeroFormattingBehavior = .pad
         song = musicService.favoriteMusics[0]
         guard let song = song else { return }
         songImage.image = musicService.getCoverImage(forItemIded: song.id)

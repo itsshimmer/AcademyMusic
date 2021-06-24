@@ -56,11 +56,11 @@
                                             <action selector="sliderAction:" destination="Y6W-OH-hqX" eventType="valueChanged" id="7oh-xV-3bc"/>
                                         </connections>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="312" translatesAutoresizingMaskIntoConstraints="NO" id="vRW-TS-fXM">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="300" translatesAutoresizingMaskIntoConstraints="NO" id="vRW-TS-fXM">
                                         <rect key="frame" x="0.0" y="30" width="374" height="14.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akj-7r-tSO">
-                                                <rect key="frame" x="0.0" y="0.0" width="31" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="43" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
@@ -72,10 +72,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xFd-mj-Bdy" firstAttribute="top" secondItem="vRW-TS-fXM" secondAttribute="top" id="Qb5-Ww-gP1"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="BWd-bd-7FH" firstAttribute="leading" secondItem="L0h-U2-Syn" secondAttribute="leading" id="CjV-MB-eAf"/>
+                                    <constraint firstAttribute="trailing" secondItem="vRW-TS-fXM" secondAttribute="trailing" id="iKe-ZJ-H0T"/>
+                                    <constraint firstItem="vRW-TS-fXM" firstAttribute="leading" secondItem="L0h-U2-Syn" secondAttribute="leading" id="uTB-kR-j2U"/>
                                     <constraint firstAttribute="trailing" secondItem="BWd-bd-7FH" secondAttribute="trailing" id="y7t-1W-qs3"/>
                                 </constraints>
                             </stackView>
