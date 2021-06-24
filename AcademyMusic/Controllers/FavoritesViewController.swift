@@ -13,12 +13,20 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var emptyStateStack: UIStackView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        if musicService.favoriteMusics.count == 0 {
+            emptyStateStack.isHidden = false
+            tableView.isHidden = true
+        }
+        else {
+            emptyStateStack.isHidden = true
+            tableView.isHidden = false
+        }
         //        navigationItem.titleView = searchBarView
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Search"
@@ -42,7 +50,15 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+        if musicService.favoriteMusics.count == 0 {
+            emptyStateStack.isHidden = false
+            tableView.isHidden = true
+        }
+        else {
+            emptyStateStack.isHidden = true
+            tableView.isHidden = false
+            tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,6 +81,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         cell.artistLabel.text = songs[indexPath.row].artist
         cell.music = songs[indexPath.row]
         cell.tableView = self.tableView
+        cell.viewController = self
         
         return cell
         
