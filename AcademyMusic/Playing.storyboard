@@ -35,32 +35,35 @@
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3n-wa-7S0">
-                                <rect key="frame" x="61" y="796" width="35" height="22"/>
-                                <state key="normal" title="Button">
-                                    <imageReference key="image" image="arrowtriangle.backward.fill" catalog="system" symbolScale="large"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poY-fx-T0F">
-                                <rect key="frame" x="303" y="794" width="51" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <imageReference key="image" image="arrowtriangle.right.fill" catalog="system" symbolScale="large"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="Rko-6R-m4h">
+                                <rect key="frame" x="7.5" y="796" width="399" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3n-wa-7S0">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="22"/>
+                                        <state key="normal" title="Button">
+                                            <imageReference key="image" image="arrowtriangle.backward.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-qH-ID7">
+                                        <rect key="frame" x="163" y="0.0" width="73" height="22"/>
+                                        <state key="normal" title="Button">
+                                            <imageReference key="image" image="play.slash.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poY-fx-T0F">
+                                        <rect key="frame" x="324" y="0.0" width="75" height="22"/>
+                                        <state key="normal" title="Button">
+                                            <imageReference key="image" image="arrowtriangle.right.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7S-Gb-Dl9">
                                 <rect key="frame" x="373.5" y="622" width="20.5" height="22"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal">
                                     <imageReference key="image" image="heart.fill" catalog="system" symbolScale="medium"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-qH-ID7">
-                                <rect key="frame" x="193" y="794" width="28" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <imageReference key="image" image="play.slash.fill" catalog="system" symbolScale="large"/>
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="L0h-U2-Syn">
@@ -110,12 +113,12 @@
                             <constraint firstItem="xmS-IC-szU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Rhs-hb-oE1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="elO-Iv-Map" secondAttribute="trailing" constant="60" id="WZv-Nf-KnB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xmS-IC-szU" secondAttribute="trailing" constant="20" id="bti-dz-E7u"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="D3n-wa-7S0" secondAttribute="bottom" constant="44" id="dQJ-2i-IaJ"/>
+                            <constraint firstItem="Rko-6R-m4h" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fYr-X4-psu"/>
                             <constraint firstItem="xmS-IC-szU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="78" id="jeW-pl-QEs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K7S-Gb-Dl9" secondAttribute="trailing" constant="20" id="pvJ-rF-MFK"/>
+                            <constraint firstItem="Rko-6R-m4h" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qCe-on-iWd"/>
                             <constraint firstItem="Y4Y-Us-Zag" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="uFa-CB-nxC"/>
                             <constraint firstItem="L0h-U2-Syn" firstAttribute="top" secondItem="xmS-IC-szU" secondAttribute="bottom" constant="151" id="ueU-iM-G3M"/>
-                            <constraint firstItem="D3n-wa-7S0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="61" id="zEz-td-L0o"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Playing" id="lWX-0d-9Jb">
