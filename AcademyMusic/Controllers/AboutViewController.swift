@@ -9,6 +9,8 @@ import UIKit
 
 class AboutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var collection: MusicCollection?
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -18,7 +20,7 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        album = musicService.getCollection(id: "2KJjOBX280F3hZZE1xO33O")
+        album = collection
         guard let album = album else { return UITableViewCell() }
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AboutTableView", for: indexPath) as? AboutTableViewCell else {
@@ -42,6 +44,9 @@ class AboutViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
+    @IBAction func dismissButtonAction(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
     @IBOutlet weak var tableView: UITableView!

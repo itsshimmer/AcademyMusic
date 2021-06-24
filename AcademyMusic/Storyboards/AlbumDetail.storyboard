@@ -163,11 +163,20 @@
                         <outlet property="detailTableView" destination="Xfk-WZ-jtc" id="bMI-FI-jiw"/>
                         <outlet property="releaseDate" destination="57Q-ch-vds" id="VPi-Ss-iyX"/>
                         <outlet property="songCount" destination="kE5-Bi-YPC" id="wZV-dg-9Bf"/>
+                        <segue destination="CzX-sD-0Hr" kind="presentation" identifier="about" id="EQW-AN-Mdu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2749.275362318841" y="93.75"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="4U5-N9-Hii">
+            <objects>
+                <viewControllerPlaceholder storyboardName="About" id="CzX-sD-0Hr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78C-cK-kzm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3592" y="60"/>
         </scene>
     </scenes>
     <resources>
