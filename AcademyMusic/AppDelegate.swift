@@ -15,14 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        do {
-            self.service = try MusicService()
-            let collection = service?.loadLibrary() ?? []
-            service?.toggleFavorite(music: collection[0].musics[0], isFavorite: true)
-            service?.toggleFavorite(music: collection[1].musics[3], isFavorite: true)
-        } catch {
-            print(error)
-        }
+//        do {
+//            self.service = try MusicService()
+//            let collection = service?.loadLibrary() ?? []
+//            service?.toggleFavorite(music: collection[0].musics[0], isFavorite: true)
+//            service?.toggleFavorite(music: collection[1].musics[3], isFavorite: true)
+//        } catch {
+//            print(error)
+//        }
         
         return true
     }
