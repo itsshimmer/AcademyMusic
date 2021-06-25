@@ -11,32 +11,41 @@
         <!--Discover-->
         <scene sceneID="V7G-kR-Tr7">
             <objects>
-                <viewController storyboardIdentifier="DiscoverScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="czQ-JM-gyz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiscoverScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="czQ-JM-gyz" customClass="DiscoverViewController" customModule="AcademyMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOg-y3-Y5O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RC-nb-lNn">
-                                <rect key="frame" x="173.5" y="437.5" width="67" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhd-tw-khq">
+                                <rect key="frame" x="143" y="433" width="129" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show media player"/>
+                                <connections>
+                                    <action selector="showPlayerAction:" destination="czQ-JM-gyz" eventType="touchUpInside" id="Tzi-Ex-0pr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="px3-99-BkE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="4RC-nb-lNn" firstAttribute="centerY" secondItem="gOg-y3-Y5O" secondAttribute="centerY" id="41F-D3-5Hp"/>
-                            <constraint firstItem="4RC-nb-lNn" firstAttribute="centerX" secondItem="gOg-y3-Y5O" secondAttribute="centerX" id="6F6-EI-i5j"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Discover" image="magnifyingglass" catalog="system" id="7mc-zo-PXB"/>
                     <navigationItem key="navigationItem" title="Discover" id="QIw-Nb-n7v"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="pf4-dz-334" kind="presentation" identifier="presentPlayer" id="o6V-Hx-cgu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ED9-JO-41s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4223.188405797102" y="156.69642857142856"/>
+        </scene>
+        <!--Playing-->
+        <scene sceneID="vnm-Tu-iad">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Playing" id="pf4-dz-334" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iQ-fS-D0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4743" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fgg-wV-cI9">
