@@ -157,9 +157,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="m05-fO-ea3" firstAttribute="centerY" secondItem="e1a-x1-vvs" secondAttribute="centerY" id="96f-Ei-bzB"/>
+                            <constraint firstItem="m05-fO-ea3" firstAttribute="centerY" secondItem="e1a-x1-vvs" secondAttribute="centerY" id="9ud-3J-V0y"/>
                             <constraint firstItem="wD4-iw-wtq" firstAttribute="trailing" secondItem="kgd-NB-TWJ" secondAttribute="trailing" id="CLZ-Xf-Ep2"/>
                             <constraint firstItem="m05-fO-ea3" firstAttribute="centerX" secondItem="e1a-x1-vvs" secondAttribute="centerX" id="L9Z-oU-mbn"/>
                             <constraint firstItem="kgd-NB-TWJ" firstAttribute="leading" secondItem="wD4-iw-wtq" secondAttribute="leading" id="Ntc-Q3-8Wt"/>
+                            <constraint firstItem="m05-fO-ea3" firstAttribute="centerY" secondItem="e1a-x1-vvs" secondAttribute="centerY" id="QvL-MN-RNS"/>
                             <constraint firstItem="wD4-iw-wtq" firstAttribute="bottom" secondItem="kgd-NB-TWJ" secondAttribute="bottom" id="azZ-hC-MbU"/>
                             <constraint firstItem="kgd-NB-TWJ" firstAttribute="top" secondItem="wD4-iw-wtq" secondAttribute="top" id="za2-Kh-21j"/>
                         </constraints>
