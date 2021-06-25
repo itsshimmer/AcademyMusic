@@ -61,16 +61,16 @@
                                             <action selector="sliderAction:" destination="Y6W-OH-hqX" eventType="valueChanged" id="7oh-xV-3bc"/>
                                         </connections>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="300" translatesAutoresizingMaskIntoConstraints="NO" id="vRW-TS-fXM">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="vRW-TS-fXM">
                                         <rect key="frame" x="0.0" y="30" width="374" height="14.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akj-7r-tSO">
-                                                <rect key="frame" x="0.0" y="0.0" width="43" height="14.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akj-7r-tSO">
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFd-mj-Bdy">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFd-mj-Bdy">
                                                 <rect key="frame" x="343" y="0.0" width="31" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
@@ -90,10 +90,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Rko-6R-m4h">
-                                <rect key="frame" x="60" y="771" width="294" height="80"/>
+                                <rect key="frame" x="60" y="776.5" width="294" height="74.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3n-wa-7S0">
-                                        <rect key="frame" x="0.0" y="0.0" width="74.5" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="74.5" height="74.5"/>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <imageReference key="image" image="backward.end.fill" catalog="system" symbolScale="large"/>
@@ -103,7 +103,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-qH-ID7">
-                                        <rect key="frame" x="109.5" y="0.0" width="75" height="80"/>
+                                        <rect key="frame" x="109.5" y="0.0" width="75" height="74.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XIy-qH-ID7" secondAttribute="height" multiplier="1:1" id="XTO-pz-H5g"/>
                                         </constraints>
@@ -117,7 +117,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poY-fx-T0F">
-                                        <rect key="frame" x="219.5" y="0.0" width="74.5" height="80"/>
+                                        <rect key="frame" x="219.5" y="0.0" width="74.5" height="74.5"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <imageReference key="image" image="forward.end.fill" catalog="system" symbolScale="large"/>
@@ -127,9 +127,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="szi-tb-IWu"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
