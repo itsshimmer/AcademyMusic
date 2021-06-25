@@ -29,6 +29,8 @@ class PlayingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         formatter.allowedUnits = [.minute, .second]
         formatter.zeroFormattingBehavior = .pad
         song = musicService.favoriteMusics[0]
