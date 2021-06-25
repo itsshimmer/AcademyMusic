@@ -30,6 +30,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.prefersLargeTitles = true
+        libraryTableView.reloadData()
     }
     /*
     // MARK: - Navigation

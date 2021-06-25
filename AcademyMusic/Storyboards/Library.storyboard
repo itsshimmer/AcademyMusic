@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Library-->
         <scene sceneID="I6Z-Tz-AjU">
             <objects>
-                <navigationController id="J3j-de-TK0" sceneMemberID="viewController">
+                <navigationController title="Library" id="J3j-de-TK0" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nSk-cM-oI5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -27,7 +27,7 @@
         <!--Library-->
         <scene sceneID="zUK-GN-yia">
             <objects>
-                <viewController id="xrG-Ep-wbt" customClass="LibraryViewController" customModule="AcademyMusic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Library" id="xrG-Ep-wbt" customClass="LibraryViewController" customModule="AcademyMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F7N-yb-2sI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,9 +105,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Library" image="book.closed.fill" catalog="system" id="y1h-y0-Gpl"/>
-                    <navigationItem key="navigationItem" title="Library" id="wxV-aR-beP">
-                        <barButtonItem key="backBarButtonItem" title=" " id="sGd-Tk-IRy"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Library" id="Hho-I3-2dS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="libraryTableView" destination="0pH-n1-Fd5" id="Iex-qk-gUP"/>

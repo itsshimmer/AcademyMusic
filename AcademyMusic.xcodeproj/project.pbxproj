@@ -13,7 +13,7 @@
 		483D95B3267D0C2F00E2123E /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483D95B2267D0C2F00E2123E /* Library.storyboard */; };
 		483D95B5267D0C4800E2123E /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483D95B4267D0C4800E2123E /* Favorites.storyboard */; };
 		483D95B7267D0C6C00E2123E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483D95B6267D0C6C00E2123E /* Discover.storyboard */; };
-		B41BAB2B26811630005C88C7 /* ServiceMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41BAB2A26811630005C88C7 /* ServiceMusic.swift */; };
+		B41BAB2B26811630005C88C7 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41BAB2A26811630005C88C7 /* MusicService.swift */; };
 		B48039FC26812AFD0063CD0E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48039FB26812AFD0063CD0E /* LibraryViewController.swift */; };
 		B48039FE26812B100063CD0E /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48039FD26812B100063CD0E /* LibraryTableViewCell.swift */; };
 		B4803A0026812EDC0063CD0E /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48039FF26812EDC0063CD0E /* FavoritesTableViewCell.swift */; };
@@ -40,7 +40,7 @@
 		483D95B2267D0C2F00E2123E /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		483D95B4267D0C4800E2123E /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		483D95B6267D0C6C00E2123E /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
-		B41BAB2A26811630005C88C7 /* ServiceMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMusic.swift; sourceTree = "<group>"; };
+		B41BAB2A26811630005C88C7 /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
 		B48039FB26812AFD0063CD0E /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		B48039FD26812B100063CD0E /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		B48039FF26812EDC0063CD0E /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
@@ -73,6 +73,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B43668282684F0440074C9D7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B49EE78A267D072D00740064 /* Main.storyboard */,
+				B49EE78F267D072E00740064 /* LaunchScreen.storyboard */,
+				483D95B2267D0C2F00E2123E /* Library.storyboard */,
+				EC04EBF02683AA9E00818913 /* Playing.storyboard */,
+				483D95B4267D0C4800E2123E /* Favorites.storyboard */,
+				483D95B6267D0C6C00E2123E /* Discover.storyboard */,
+				48349FF226825ABF005C76C9 /* AlbumDetail.storyboard */,
+				EC04EBEC26825BC600818913 /* About.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B43668292684F0530074C9D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B41BAB2A26811630005C88C7 /* MusicService.swift */,
+				B49EE788267D072D00740064 /* ViewController.swift */,
+				B48039FB26812AFD0063CD0E /* LibraryViewController.swift */,
+				B48039FD26812B100063CD0E /* LibraryTableViewCell.swift */,
+				EC017719267D23F800E66B80 /* FavoritesViewController.swift */,
+				B48039FF26812EDC0063CD0E /* FavoritesTableViewCell.swift */,
+				EC04EBF22683B19300818913 /* PlayingViewController.swift */,
+				48349FF426825E54005C76C9 /* AlbumDetailViewController.swift */,
+				48349FF62683BF76005C76C9 /* DetailViewCell.swift */,
+				EC04EBEE2682610800818913 /* AboutViewController.swift */,
+				EC04EBF42683BE8D00818913 /* AboutTableViewCell.swift */,
+				EC04EBF62683BFD700818913 /* AboutArtistTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B436682A2684F0650074C9D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B49EE78D267D072E00740064 /* Assets.xcassets */,
+				EC1FADB72681012C00D0708A /* data.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B49EE778267D072D00740064 = {
 			isa = PBXGroup;
 			children = (
@@ -92,31 +135,12 @@
 		B49EE783267D072D00740064 /* AcademyMusic */ = {
 			isa = PBXGroup;
 			children = (
-				B48039FD26812B100063CD0E /* LibraryTableViewCell.swift */,
-				B48039FB26812AFD0063CD0E /* LibraryViewController.swift */,
+				B436682A2684F0650074C9D7 /* Resources */,
+				B43668282684F0440074C9D7 /* Storyboards */,
+				B43668292684F0530074C9D7 /* Controllers */,
 				B49EE784267D072D00740064 /* AppDelegate.swift */,
 				B49EE786267D072D00740064 /* SceneDelegate.swift */,
-				EC1FADB72681012C00D0708A /* data.json */,
-				B49EE788267D072D00740064 /* ViewController.swift */,
-				B49EE78A267D072D00740064 /* Main.storyboard */,
-				B49EE78D267D072E00740064 /* Assets.xcassets */,
-				B49EE78F267D072E00740064 /* LaunchScreen.storyboard */,
 				B49EE792267D072E00740064 /* Info.plist */,
-				483D95B2267D0C2F00E2123E /* Library.storyboard */,
-				483D95B4267D0C4800E2123E /* Favorites.storyboard */,
-				EC017719267D23F800E66B80 /* FavoritesViewController.swift */,
-				B48039FF26812EDC0063CD0E /* FavoritesTableViewCell.swift */,
-				EC04EBEC26825BC600818913 /* About.storyboard */,
-				EC04EBF42683BE8D00818913 /* AboutTableViewCell.swift */,
-				EC04EBF62683BFD700818913 /* AboutArtistTableViewCell.swift */,
-				EC04EBF02683AA9E00818913 /* Playing.storyboard */,
-				EC04EBF22683B19300818913 /* PlayingViewController.swift */,
-				EC04EBEE2682610800818913 /* AboutViewController.swift */,
-				483D95B6267D0C6C00E2123E /* Discover.storyboard */,
-				B41BAB2A26811630005C88C7 /* ServiceMusic.swift */,
-				48349FF226825ABF005C76C9 /* AlbumDetail.storyboard */,
-				48349FF426825E54005C76C9 /* AlbumDetailViewController.swift */,
-				48349FF62683BF76005C76C9 /* DetailViewCell.swift */,
 			);
 			path = AcademyMusic;
 			sourceTree = "<group>";
@@ -211,7 +235,7 @@
 				B4803A0026812EDC0063CD0E /* FavoritesTableViewCell.swift in Sources */,
 				48349FF72683BF76005C76C9 /* DetailViewCell.swift in Sources */,
 				B48039FE26812B100063CD0E /* LibraryTableViewCell.swift in Sources */,
-				B41BAB2B26811630005C88C7 /* ServiceMusic.swift in Sources */,
+				B41BAB2B26811630005C88C7 /* MusicService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
