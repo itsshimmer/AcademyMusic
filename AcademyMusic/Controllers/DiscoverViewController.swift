@@ -10,9 +10,6 @@ import UIKit
 class DiscoverViewController: UIViewController {
 
     
-    @IBAction func showPlayerAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "presentPlayer", sender: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

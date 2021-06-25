@@ -54,13 +54,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-8Z-Xje">
                                                     <rect key="frame" x="75" y="14.5" width="268" height="32.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqr-rd-Xbs">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqr-rd-Xbs">
                                                             <rect key="frame" x="0.0" y="0.0" width="268" height="18"/>
                                                             <accessibility key="accessibilityConfiguration" identifier="TitleLabel"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9o-bq-qWB">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9o-bq-qWB">
                                                             <rect key="frame" x="0.0" y="18" width="268" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,6 +108,7 @@
                                             <outlet property="artistLabel" destination="K9o-bq-qWB" id="Q4u-CJ-ukL"/>
                                             <outlet property="musicImage" destination="P63-nd-pzT" id="mbH-lc-0tv"/>
                                             <outlet property="musicNameLabel" destination="gqr-rd-Xbs" id="ImL-ih-LH5"/>
+                                            <segue destination="XWL-mw-40H" kind="presentation" identifier="toPlaying" id="Rno-zG-ghj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -177,6 +178,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjX-hc-Jgv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2267" y="-118"/>
+        </scene>
+        <!--Playing-->
+        <scene sceneID="zGm-CS-QX8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Playing" id="XWL-mw-40H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJC-mK-P60" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3160" y="-214"/>
         </scene>
     </scenes>
     <resources>

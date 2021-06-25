@@ -62,6 +62,11 @@ class AlbumDetailViewController: UIViewController, UITableViewDelegate, UITableV
             let destination = navBar?.topViewController as? AboutViewController
             destination?.collection = musicCollection
         }
+        else if segue.identifier == "toPlaying", let cell = sender as? DetailViewCell {
+            let navControl = segue.destination as? UINavigationController
+            let destination = navControl?.topViewController as? PlayingViewController
+            destination?.song = cell.music
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

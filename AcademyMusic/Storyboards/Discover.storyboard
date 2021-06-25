@@ -15,16 +15,6 @@
                     <view key="view" contentMode="scaleToFill" id="gOg-y3-Y5O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhd-tw-khq">
-                                <rect key="frame" x="143" y="433" width="129" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show media player"/>
-                                <connections>
-                                    <action selector="showPlayerAction:" destination="czQ-JM-gyz" eventType="touchUpInside" id="Tzi-Ex-0pr"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="px3-99-BkE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
