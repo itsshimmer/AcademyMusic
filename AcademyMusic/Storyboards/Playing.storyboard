@@ -18,25 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xmS-IC-szU">
-                                <rect key="frame" x="20" y="166" width="374" height="374"/>
+                                <rect key="frame" x="20" y="153" width="374" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xmS-IC-szU" secondAttribute="height" multiplier="1:1" id="kdX-mN-U3u"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4Y-Us-Zag">
-                                <rect key="frame" x="20" y="606" width="334" height="33.5"/>
+                                <rect key="frame" x="20" y="593" width="334" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elO-Iv-Map">
-                                <rect key="frame" x="21" y="647.5" width="333" height="20.5"/>
+                                <rect key="frame" x="21" y="634.5" width="333" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7S-Gb-Dl9">
-                                <rect key="frame" x="364" y="622" width="30" height="30"/>
+                                <rect key="frame" x="364" y="609" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="K7S-Gb-Dl9" secondAttribute="height" multiplier="1:1" id="3Zj-3P-Ra1"/>
                                     <constraint firstAttribute="width" constant="30" id="XgL-HH-UkX"/>
@@ -52,25 +52,25 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="L0h-U2-Syn">
-                                <rect key="frame" x="20" y="691" width="374" height="44.5"/>
+                                <rect key="frame" x="20" y="678" width="374" height="57.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BWd-bd-7FH">
-                                        <rect key="frame" x="-2" y="0.0" width="378" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="378" height="44"/>
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                         <connections>
                                             <action selector="sliderAction:" destination="Y6W-OH-hqX" eventType="valueChanged" id="7oh-xV-3bc"/>
                                         </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="vRW-TS-fXM">
-                                        <rect key="frame" x="0.0" y="30" width="374" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="43" width="374" height="14.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akj-7r-tSO">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akj-7r-tSO">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFd-mj-Bdy">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFd-mj-Bdy">
                                                 <rect key="frame" x="343" y="0.0" width="31" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
@@ -84,13 +84,15 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="BWd-bd-7FH" firstAttribute="leading" secondItem="L0h-U2-Syn" secondAttribute="leading" id="CjV-MB-eAf"/>
+                                    <constraint firstAttribute="bottom" secondItem="vRW-TS-fXM" secondAttribute="bottom" id="CtS-xr-OXf"/>
+                                    <constraint firstItem="vRW-TS-fXM" firstAttribute="top" secondItem="BWd-bd-7FH" secondAttribute="bottom" id="J5X-aN-9gh"/>
                                     <constraint firstAttribute="trailing" secondItem="vRW-TS-fXM" secondAttribute="trailing" id="iKe-ZJ-H0T"/>
                                     <constraint firstItem="vRW-TS-fXM" firstAttribute="leading" secondItem="L0h-U2-Syn" secondAttribute="leading" id="uTB-kR-j2U"/>
                                     <constraint firstAttribute="trailing" secondItem="BWd-bd-7FH" secondAttribute="trailing" id="y7t-1W-qs3"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Rko-6R-m4h">
-                                <rect key="frame" x="60" y="776.5" width="294" height="74.5"/>
+                                <rect key="frame" x="60" y="786.5" width="294" height="74.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3n-wa-7S0">
                                         <rect key="frame" x="0.0" y="0.0" width="74.5" height="74.5"/>
@@ -141,12 +143,13 @@
                             <constraint firstItem="elO-Iv-Map" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="21" id="QyL-IB-oFW"/>
                             <constraint firstItem="xmS-IC-szU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Rhs-hb-oE1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="elO-Iv-Map" secondAttribute="trailing" constant="60" id="WZv-Nf-KnB"/>
-                            <constraint firstAttribute="bottom" secondItem="Rko-6R-m4h" secondAttribute="bottom" constant="45" id="XGp-NZ-Rfg"/>
+                            <constraint firstAttribute="bottom" secondItem="Rko-6R-m4h" secondAttribute="bottom" constant="35" id="XGp-NZ-Rfg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xmS-IC-szU" secondAttribute="trailing" constant="20" id="bti-dz-E7u"/>
                             <constraint firstItem="Rko-6R-m4h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="dPS-oG-Dg8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Rko-6R-m4h" secondAttribute="trailing" constant="60" id="gq3-11-YUs"/>
-                            <constraint firstItem="xmS-IC-szU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="78" id="jeW-pl-QEs"/>
+                            <constraint firstItem="xmS-IC-szU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="65" id="jeW-pl-QEs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K7S-Gb-Dl9" secondAttribute="trailing" constant="20" id="pvJ-rF-MFK"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="L0h-U2-Syn" secondAttribute="bottom" constant="126.5" id="tjC-pB-nUv"/>
                             <constraint firstItem="Y4Y-Us-Zag" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="uFa-CB-nxC"/>
                             <constraint firstItem="L0h-U2-Syn" firstAttribute="top" secondItem="xmS-IC-szU" secondAttribute="bottom" constant="151" id="ueU-iM-G3M"/>
                         </constraints>
