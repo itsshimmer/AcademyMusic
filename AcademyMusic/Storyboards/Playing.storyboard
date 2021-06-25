@@ -51,12 +51,13 @@
                                     <action selector="likeButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="J2U-we-8gh"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="L0h-U2-Syn">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L0h-U2-Syn">
                                 <rect key="frame" x="20" y="678" width="374" height="57.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BWd-bd-7FH">
-                                        <rect key="frame" x="-2" y="0.0" width="378" height="44"/>
+                                        <rect key="frame" x="-2" y="0.0" width="378" height="34"/>
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                        <color key="thumbTintColor" systemColor="systemGreenColor"/>
                                         <connections>
                                             <action selector="sliderAction:" destination="Y6W-OH-hqX" eventType="valueChanged" id="7oh-xV-3bc"/>
                                         </connections>
@@ -85,7 +86,6 @@
                                 <constraints>
                                     <constraint firstItem="BWd-bd-7FH" firstAttribute="leading" secondItem="L0h-U2-Syn" secondAttribute="leading" id="CjV-MB-eAf"/>
                                     <constraint firstAttribute="bottom" secondItem="vRW-TS-fXM" secondAttribute="bottom" id="CtS-xr-OXf"/>
-                                    <constraint firstItem="vRW-TS-fXM" firstAttribute="top" secondItem="BWd-bd-7FH" secondAttribute="bottom" id="J5X-aN-9gh"/>
                                     <constraint firstAttribute="trailing" secondItem="vRW-TS-fXM" secondAttribute="trailing" id="iKe-ZJ-H0T"/>
                                     <constraint firstItem="vRW-TS-fXM" firstAttribute="leading" secondItem="L0h-U2-Syn" secondAttribute="leading" id="uTB-kR-j2U"/>
                                     <constraint firstAttribute="trailing" secondItem="BWd-bd-7FH" secondAttribute="trailing" id="y7t-1W-qs3"/>
