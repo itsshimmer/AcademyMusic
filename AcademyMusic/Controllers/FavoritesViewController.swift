@@ -91,6 +91,12 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         return 1
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPlaying", let cell = sender as? FavoritesTableViewCell {
+            let navControl = segue.destination as? UINavigationController
+            let destination = navControl?.topViewController as? PlayingViewController
+            destination?.song = cell.music
+        }
+    }
     
 }

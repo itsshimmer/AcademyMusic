@@ -29,21 +29,21 @@ class PlayingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         formatter.allowedUnits = [.minute, .second]
         formatter.zeroFormattingBehavior = .pad
-        song = musicService.favoriteMusics[0]
-        guard let song = song else { return }
-        songImage.image = musicService.getCoverImage(forItemIded: song.id)
-        songTitle.text = song.title
-        artist.text = song.artist
+        songImage.image = musicService.getCoverImage(forItemIded: song!.id)
+        songTitle.text = song!.title
+        artist.text = song!.artist
         slider.minimumValue = 0
-        slider.maximumValue = Float(song.length)
+        slider.maximumValue = Float(song!.length)
         timePassed.text = formatter.string(from: TimeInterval(slider.value))
-        remainingTime.text = formatter.string(from: song.length)
+        remainingTime.text = formatter.string(from: song!.length)
         if isPlaying {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
         }
-        musicService.favoriteMusics.contains(song) ? likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal) : likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        musicService.favoriteMusics.contains(song!) ? likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal) : likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
         isPlaying ? playButton.setImage(UIImage(systemName: "pause.circle.fill"), for: .normal) : playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
         
     }
